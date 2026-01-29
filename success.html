@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Dossier Japon - Paiement confirmé. Téléchargez votre guide.">
+    <title>Paiement Réussi | Le Dossier Japon</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1149462600374624');
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase', {value: 4900, currency: 'XOF'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1149462600374624&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0a1628;
+            --secondary-blue: #1a2d4a;
+            --accent-gold: #d4a54a;
+            --accent-gold-light: #e8c675;
+            --text-white: #ffffff;
+            --text-light: #e0e0e0;
+            --success-green: #22c55e;
+            --whatsapp-green: #25D366;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Success Header */
+        .success-header {
+            background: linear-gradient(180deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--success-green), #16a34a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 50px;
+            animation: scale-in 0.5s ease-out;
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        @keyframes scale-in {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .success-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-white);
+        }
+
+        .success-subtitle {
+            font-size: 18px;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* Download Section */
+        .download-section {
+            padding: 40px 0;
+            background: var(--primary-blue);
+        }
+
+        .download-card {
+            background: var(--secondary-blue);
+            border: 2px solid var(--accent-gold);
+            border-radius: 20px;
+            padding: 40px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light), var(--accent-gold));
+        }
+
+        .download-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .download-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-white);
+        }
+
+        .download-text {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-button {
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            color: var(--primary-blue);
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(212, 165, 74, 0.4);
+            animation: pulse-button 2s infinite;
+        }
+
+        @keyframes pulse-button {
+            0%, 100% { box-shadow: 0 8px 30px rgba(212, 165, 74, 0.4); }
+            50% { box-shadow: 0 8px 50px rgba(212, 165, 74, 0.7); }
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(212, 165, 74, 0.6);
+        }
+
+        .download-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Upsell Section */
+        .upsell-section {
+            padding: 40px 0 60px;
+            background: var(--secondary-blue);
+        }
+
+        .upsell-card {
+            background: var(--primary-blue);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .upsell-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .upsell-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-white);
+        }
+
+        .upsell-text {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 400px;
+            background: var(--whatsapp-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            padding: 30px 0;
+            background: var(--primary-blue);
+        }
+
+        .summary-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .summary-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            padding-top: 16px;
+            margin-top: 8px;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .summary-label {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .summary-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+
+        .summary-row:last-child .summary-label,
+        .summary-row:last-child .summary-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 24px 0;
+            background: #050a12;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti Container -->
+    <div class="confetti" id="confetti"></div>
+
+    <!-- Success Header -->
+    <header class="success-header">
+        <div class="container">
+            <div class="success-icon">✓</div>
+            <h1 class="success-title">Paiement réussi !</h1>
+            <p class="success-subtitle">Commande confirmée</p>
+        </div>
+    </header>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <div class="download-card">
+                <div class="download-icon">📘</div>
+                <h2 class="download-title">Votre guide est prêt !</h2>
+                <p class="download-text">
+                    Cliquez sur le bouton ci-dessous pour télécharger immédiatement 
+                    "Le Dossier Japon" et commencer votre aventure.
+                </p>
+                <a href="https://drive.google.com/file/d/1eXffRWQQSbEJvFqwBqtEHlrVEnKlThb1/view?usp=sharing" class="download-button" target="_blank" rel="noopener">
+                    📥 Téléchargez Votre Guide
+                </a>
+                <p class="download-note">
+                    💡 Le lien s'ouvrira dans un nouvel onglet. Sauvegardez le fichier sur votre appareil.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Summary -->
+    <section class="order-summary">
+        <div class="container">
+            <div class="summary-card">
+                <h3 class="summary-title">Récapitulatif de commande</h3>
+                <div class="summary-row">
+                    <span class="summary-label">Produit</span>
+                    <span class="summary-value">Le Dossier Japon</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Format</span>
+                    <span class="summary-value">PDF (Téléchargement)</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Total payé</span>
+                    <span class="summary-value">4 900 CFA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upsell Section -->
+    <section class="upsell-section">
+        <div class="container">
+            <div class="upsell-card">
+                <div class="upsell-icon">💬</div>
+                <h3 class="upsell-title">Besoin d'aide supplémentaire ?</h3>
+                <p class="upsell-text">
+                    Vous avez des questions sur le guide ou votre demande de visa ? 
+                    Je suis disponible pour vous aider personnellement.
+                </p>
+                <a href="https://wa.link/s1g9c2" class="whatsapp-button" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Discutez sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Le Dossier Japon. Tous droits réservés.</p>
+            <p style="margin-top: 8px;">Merci pour votre confiance !</p>
+        </div>
+    </footer>
+
+    <script>
+        // Confetti Animation
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#d4a54a', '#e8c675', '#22c55e', '#ffffff', '#1a2d4a'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                    
+                    if (Math.random() > 0.5) {
+                        confetti.style.borderRadius = '50%';
+                    }
+                    
+                    confettiContainer.appendChild(confetti);
+                    
+                    // Remove confetti after animation
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 4000);
+                }, i * 50);
+            }
+        }
+
+        // Run confetti on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            createConfetti();
+        });
+    </script>
+</body>
+</html>
