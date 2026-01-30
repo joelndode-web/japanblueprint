@@ -41,6 +41,7 @@
             --text-light: #e0e0e0;
             --success-green: #22c55e;
             --urgent-red: #dc2626;
+            --whatsapp-green: #25D366;
         }
 
         body {
@@ -766,6 +767,36 @@
             animation: none;
         }
 
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 80px;
+            left: 16px;
+            background: var(--whatsapp-green);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
         /* Exit Intent Popup */
         .exit-popup {
             position: fixed;
@@ -892,6 +923,15 @@
         }
 
         @media (max-width: 480px) {
+            .whatsapp-button span {
+                display: none;
+            }
+
+            .whatsapp-button {
+                padding: 14px;
+                border-radius: 50%;
+            }
+
             .social-proof {
                 left: 16px;
                 right: 16px;
@@ -953,7 +993,7 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">370+</div>
-                    <div class="stat-label">Téléchargements</div>
+                    <div class="stat-label">Personnes Aidées</div>
                 </div>
             </div>
         </div>
@@ -1012,6 +1052,72 @@
                     <li>Les informations sont accessibles à tous</li>
                     <li>Il existe des catégories de visa méconnues</li>
                 </ul>
+            </div>
+
+            <!-- Budget Breakdown Table -->
+            <div style="background: rgba(212, 165, 74, 0.1); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 24px; margin-top: 24px;">
+                <h3 style="font-size: 18px; font-weight: 700; color: var(--accent-gold); margin-bottom: 16px; text-align: center;">💰 Où vont les 900 000 CFA ? (Ils restent dans TA poche)</h3>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--accent-gold);">
+                                <th style="text-align: left; padding: 12px 8px; color: var(--text-white);">Dépense</th>
+                                <th style="text-align: right; padding: 12px 8px; color: var(--text-white);">Coût (Approx)</th>
+                                <th style="text-align: left; padding: 12px 8px; color: var(--text-white);">Tu paies qui ?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">✈️ Billet d'avion</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~650 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">Ethiopian/Turkish Airlines</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">📄 Frais de visa</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~20 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">Ambassade du Japon</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">📋 Compilation des documents</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~80 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">Traductions, légalisations</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">📦 Envoi DHL</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~50 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">DHL / FedEx</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">🖨️ Impressions & Cyber</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~30 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">Cyber café local</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">🏥 Visite médicale</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~40 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-light);">Hôpital agréé</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 8px; color: var(--text-light);">🚫 Frais d'agent</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--success-green); font-weight: 700;">0 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--success-green); font-weight: 600;">Personne !</td>
+                            </tr>
+                            <tr style="background: rgba(212, 165, 74, 0.2);">
+                                <td style="padding: 12px 8px; color: var(--text-white); font-weight: 700;">TOTAL</td>
+                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 800;">~870 000 - 900 000 CFA</td>
+                                <td style="padding: 12px 8px; color: var(--text-white);"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: var(--primary-blue); border-radius: 8px; padding: 16px; margin-top: 16px; text-align: center;">
+                    <p style="font-size: 14px; color: var(--text-light); margin: 0;">
+                        <strong style="color: var(--accent-gold);">Je ne touche pas tes 900K.</strong> Tu paies ces entreprises directement.<br>
+                        Moi, je te montre juste <strong style="color: var(--text-white);">la méthode que j'ai utilisée</strong> pour <strong style="color: var(--accent-gold);">4 900 CFA</strong>.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -1268,7 +1374,7 @@
                 Votre avenir au Japon<br>commence aujourd'hui
             </h2>
             <p class="final-cta-subtitle">
-                Arrêtez d'attendre. Commencez maintenant.
+                Télécharge le guide et prépare ton passeport.
             </p>
             
             <a href="https://whaqthkd.mychariow.shop/prd_zj59vu/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">
@@ -1276,7 +1382,7 @@
             </a>
             
             <div class="downloads-badge">
-                ✅ 370+ téléchargements ce mois
+                ✅ 370+ personnes aidées
             </div>
         </div>
     </section>
@@ -1400,12 +1506,14 @@
 
         // Social Proof Notifications
         const proofData = [
-            { name: "K.M. de Dakar", flag: "🇸🇳" },
-            { name: "A.B. d'Abidjan", flag: "🇨🇮" },
-            { name: "S.T. de Conakry", flag: "🇬🇳" },
-            { name: "M.D. de Dakar", flag: "🇸🇳" },
-            { name: "J.K. d'Abidjan", flag: "🇨🇮" },
-            { name: "P.N. de Bamako", flag: "🇲🇱" }
+            { name: "Jean-Pierre de Douala", flag: "🇨🇲" },
+            { name: "Aminata de Dakar", flag: "🇸🇳" },
+            { name: "Kouassi d'Abidjan", flag: "🇨🇮" },
+            { name: "Mamadou de Conakry", flag: "🇬🇳" },
+            { name: "Fatou de Bamako", flag: "🇲🇱" },
+            { name: "Paul de Yaoundé", flag: "🇨🇲" },
+            { name: "Ibrahima de Dakar", flag: "🇸🇳" },
+            { name: "Awa d'Abidjan", flag: "🇨🇮" }
         ];
 
         let proofIndex = 0;
