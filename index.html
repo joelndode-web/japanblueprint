@@ -1056,60 +1056,74 @@
 
             <!-- Budget Breakdown Table -->
             <div style="background: rgba(212, 165, 74, 0.1); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 24px; margin-top: 24px;">
-                <h3 style="font-size: 18px; font-weight: 700; color: var(--accent-gold); margin-bottom: 16px; text-align: center;">💰 Où vont les 900 000 CFA ? (Ils restent dans TA poche)</h3>
+                <h3 style="font-size: 18px; font-weight: 700; color: var(--accent-gold); margin-bottom: 20px; text-align: center;">💰 Où vont les 900 000 CFA ? (Ils restent dans TA poche)</h3>
                 
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                        <thead>
-                            <tr style="border-bottom: 2px solid var(--accent-gold);">
-                                <th style="text-align: left; padding: 12px 8px; color: var(--text-white);">Dépense</th>
-                                <th style="text-align: right; padding: 12px 8px; color: var(--text-white);">Coût (Approx)</th>
-                                <th style="text-align: left; padding: 12px 8px; color: var(--text-white);">Tu paies qui ?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">✈️ Billet d'avion</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~650 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">Ethiopian/Turkish Airlines</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">📄 Frais de visa</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~20 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">Ambassade du Japon</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">📋 Compilation des documents</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~80 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">Traductions, légalisations</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">📦 Envoi DHL</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~50 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">DHL / FedEx</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">🖨️ Impressions & Cyber</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~30 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">Cyber café local</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">🏥 Visite médicale</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 600;">~40 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-light);">Hôpital agréé</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <td style="padding: 12px 8px; color: var(--text-light);">🚫 Frais d'agent</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--success-green); font-weight: 700;">0 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--success-green); font-weight: 600;">Personne !</td>
-                            </tr>
-                            <tr style="background: rgba(212, 165, 74, 0.2);">
-                                <td style="padding: 12px 8px; color: var(--text-white); font-weight: 700;">TOTAL</td>
-                                <td style="padding: 12px 8px; text-align: right; color: var(--accent-gold); font-weight: 800;">~870 000 - 900 000 CFA</td>
-                                <td style="padding: 12px 8px; color: var(--text-white);"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Mobile-friendly stacked cards -->
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">✈️ Billet d'avion</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~650 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ Ethiopian/Turkish Airlines</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">📄 Frais de visa</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~20 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ Ambassade du Japon</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">📋 Documents</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~80 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ Traductions, légalisations</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">📦 Envoi DHL</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~50 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ DHL / FedEx</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">🖨️ Impressions</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~30 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ Cyber café local</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">🏥 Visite médicale</span>
+                            <span style="font-size: 16px; color: var(--accent-gold); font-weight: 700;">~40 000 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light);">→ Hôpital agréé</span>
+                    </div>
+
+                    <div style="background: var(--primary-blue); border-radius: 12px; padding: 16px; border-left: 4px solid var(--success-green);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 15px; color: var(--text-white); font-weight: 600;">🚫 Frais d'agent</span>
+                            <span style="font-size: 16px; color: var(--success-green); font-weight: 700;">0 CFA</span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--success-green);">→ Personne !</span>
+                    </div>
+
+                    <div style="background: rgba(212, 165, 74, 0.3); border-radius: 12px; padding: 16px; border: 2px solid var(--accent-gold);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 16px; color: var(--text-white); font-weight: 700;">TOTAL</span>
+                            <span style="font-size: 18px; color: var(--accent-gold); font-weight: 800;">~870 000 - 900 000 CFA</span>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div style="background: var(--primary-blue); border-radius: 8px; padding: 16px; margin-top: 16px; text-align: center;">
