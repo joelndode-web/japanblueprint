@@ -119,13 +119,41 @@
         .inside-card h4 span{font-size:24px}
         .inside-card p{font-size:15px;color:var(--gray2);margin:0;line-height:1.7}
         
-        /* Proof */
+        /* Proof - UPDATED FOR POP */
         .proof-section{padding:64px 0;background:var(--bg)}
         .proof-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px}
-        .proof-item{position:relative;border-radius:20px;overflow:hidden;border:3px solid rgba(212,165,74,0.4);transition:all 0.3s ease}
-        .proof-item:hover{border-color:var(--gold);transform:scale(1.01)}
-        .proof-item img{width:100%;height:auto;display:block}
-        .proof-item-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.95));padding:80px 24px 24px;font-size:18px;font-weight:700;text-align:center}
+        .proof-item{
+            position:relative;
+            border-radius:20px;
+            overflow:hidden;
+            border: 2px solid var(--gold); /* Solid gold border */
+            box-shadow: 0 10px 40px rgba(212, 165, 74, 0.15); /* Glow effect */
+            transition:all 0.3s ease;
+            background: #000;
+        }
+        .proof-item:hover{
+            border-color:#fff;
+            transform:scale(1.02);
+            box-shadow: 0 15px 50px rgba(212, 165, 74, 0.3);
+            z-index: 10;
+        }
+        .proof-item img{
+            width:100%;
+            height:auto;
+            display:block;
+            cursor: pointer; /* Shows hand cursor */
+        }
+        .proof-item-label{
+            position:absolute;
+            bottom:0;left:0;right:0;
+            background:linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 80%, transparent 100%);
+            padding:60px 24px 20px;
+            font-size:16px;
+            font-weight:700;
+            text-align:center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
         
         /* Testimonials */
         .testimonials-section{padding:64px 0;background:var(--card)}
@@ -310,24 +338,16 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Japan Blueprint — 4,900 CFA</a>
-            <p class="cta-helper"><span>✓</span> Instant download • Works on any device</p>
-        </div>
-    </section>
-
-    <!-- Proof -->
+    <!-- Proof - UPDATED WITH NEW IMAGES -->
     <section class="proof-section">
         <div class="container">
             <span class="section-label">The Proof</span>
             <h2 class="section-title">This Is Real. See For Yourself.</h2>
             <div class="proof-grid">
-                <div class="proof-item"><img src="https://i.imgur.com/JQhXxZO.jpeg" alt="Japan Visa"><div class="proof-item-label">My Japan Visa — Issued in Yaoundé</div></div>
-                <div class="proof-item"><img src="https://i.imgur.com/XAuUkU9.jpeg" alt="Residence Card"><div class="proof-item-label">My Japanese Residence Card</div></div>
-                <div class="proof-item"><img src="https://i.imgur.com/vIJ96d9.jpeg" alt="Passport Stamps"><div class="proof-item-label">Entry & Exit Stamps — Multiple Trips</div></div>
-                <div class="proof-item"><img src="https://i.imgur.com/hs3HzUR.jpeg" alt="University in Japan"><div class="proof-item-label">First Day at University in Japan</div></div>
+                <div class="proof-item"><img src="https://i.imgur.com/CEjgI9D.jpeg" alt="Japan Visa" onclick="window.open(this.src)"><div class="proof-item-label">My Japan Student Visa</div></div>
+                <div class="proof-item"><img src="https://i.imgur.com/6nzx23y.jpeg" alt="University in Japan" onclick="window.open(this.src)"><div class="proof-item-label">First Day at University in Japan</div></div>
+                <div class="proof-item"><img src="https://i.imgur.com/ie1ujS8.jpeg" alt="Lifestyle in Japan" onclick="window.open(this.src)"><div class="proof-item-label">Living & Working in Japan</div></div>
+                <div class="proof-item"><img src="https://i.imgur.com/70CA0B0.jpeg" alt="Residence Permit" onclick="window.open(this.src)"><div class="proof-item-label">Residence Permit</div></div>
             </div>
         </div>
     </section>
