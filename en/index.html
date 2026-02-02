@@ -119,9 +119,8 @@
         .inside-card h4 span{font-size:24px}
         .inside-card p{font-size:15px;color:var(--gray2);margin:0;line-height:1.7}
         
-        /* Proof - UPDATED FOR 6 IMAGES + 2 COLUMNS */
+        /* Proof - 2 COLUMN GRID */
         .proof-section{padding:64px 0;background:var(--bg)}
-        /* Changed to 2 columns on desktop for better visibility of 6 images */
         .proof-grid{
             display:grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -145,11 +144,10 @@
         }
         .proof-item img{
             width:100%;
-            height:auto;
+            height:300px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensures image covers the box without stretching */
             display:block;
             cursor: pointer;
-            object-fit: cover;
-            aspect-ratio: 4/3; /* Keeps all images uniform size */
         }
         .proof-item-label{
             position:absolute;
@@ -349,18 +347,49 @@
         </div>
     </section>
 
-    <!-- Proof - 6 IMAGES + 2 COLUMN LAYOUT -->
+    <!-- Proof - 6 CORRECTLY MAPPED IMAGES -->
     <section class="proof-section">
         <div class="container">
             <span class="section-label">The Proof</span>
             <h2 class="section-title">This Is Real. See For Yourself.</h2>
             <div class="proof-grid">
-                <div class="proof-item"><img src="https://imgur.com/6c6ec352-131d-4baf-a6c4-2be87f7f411c" alt="Proof 1" onclick="window.open(this.src)"><div class="proof-item-label">Verified Document</div></div>
-                <div class="proof-item"><img src="https://imgur.com/bc8cf440-01d9-4fa6-bb3f-97ac9b04c707" alt="Proof 2" onclick="window.open(this.src)"><div class="proof-item-label">Success Result</div></div>
-                <div class="proof-item"><img src="https://i.imgur.com/FGiP3pJ.jpeg" alt="Proof 3" onclick="window.open(this.src)"><div class="proof-item-label">Living in Japan</div></div>
-                <div class="proof-item"><img src="https://imgur.com/b09e5b54-3126-4581-a6c8-a0261c327440" alt="Proof 4" onclick="window.open(this.src)"><div class="proof-item-label">Official Approval</div></div>
-                <div class="proof-item"><img src="https://i.imgur.com/cJ46SBN.jpeg" alt="Proof 5" onclick="window.open(this.src)"><div class="proof-item-label">University Campus</div></div>
-                <div class="proof-item"><img src="https://imgur.com/85ac6f44-ef8f-4fd0-9ef6-07e0c1ae68ea" alt="Proof 6" onclick="window.open(this.src)"><div class="proof-item-label">Visa Success</div></div>
+                
+                <!-- 1. Work Visa -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/dDfyJzo.jpeg" alt="Japan Work Visa" onclick="window.open(this.src)">
+                    <div class="proof-item-label">Japan Work Visa</div>
+                </div>
+
+                <!-- 2. Student Visa -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/0Qp4W0T.jpeg" alt="Student Visa Approval" onclick="window.open(this.src)">
+                    <div class="proof-item-label">Student Visa Approval</div>
+                </div>
+
+                <!-- 3. Residence Permit -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/vXP5At6.jpeg" alt="Residence Permit" onclick="window.open(this.src)">
+                    <div class="proof-item-label">Residence Permit</div>
+                </div>
+
+                <!-- 4. Student ID Card -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/FGiP3pJ.jpeg" alt="Student ID Card" onclick="window.open(this.src)">
+                    <div class="proof-item-label">Student ID Card</div>
+                </div>
+
+                <!-- 5. University Campus -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/EhWZvbP.jpeg" alt="University Campus" onclick="window.open(this.src)">
+                    <div class="proof-item-label">University Campus</div>
+                </div>
+
+                <!-- 6. Lifestyle (Akihabara) -->
+                <div class="proof-item">
+                    <img src="https://i.imgur.com/cJ46SBN.jpeg" alt="Living in Tokyo" onclick="window.open(this.src)">
+                    <div class="proof-item-label">Living in Tokyo (Akihabara)</div>
+                </div>
+
             </div>
         </div>
     </section>
