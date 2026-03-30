@@ -21,13 +21,11 @@
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1149462600374624&ev=PageView&noscript=1"/></noscript>
-
     <!-- OPTIMIZATION 1: Defer Google Fonts (don't block render) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap"></noscript>
-
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--bg:#0a0e17;--card:#111827;--gold:#d4a54a;--gold-dark:#b8912e;--white:#fff;--gray:#d1d5db;--gray2:#9ca3af;--green:#22c55e;--red:#ef4444}
@@ -55,8 +53,6 @@
         .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
         .video-caption{text-align:center;padding:18px 20px;background:var(--card);font-size:15px;color:var(--gray)}
         .video-caption strong{color:var(--gold)}
-
-        /* OPTIMIZATION 2: Video Facade (thumbnail + play button) */
         .video-facade{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
         .video-facade-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#111827 0%,#1a1a2e 50%,#0a0e17 100%)}
         .video-facade-content{position:relative;z-index:1;text-align:center}
@@ -152,6 +148,19 @@
         .testimonial-flag{font-size:36px}
         .testimonial-info h5{font-size:16px;font-weight:700;margin-bottom:4px}
         .testimonial-info p{font-size:14px;color:var(--gray2);margin:0}
+
+        /* Video Testimonial */
+        .video-testimonial{margin-bottom:32px}
+        .video-testimonial-wrapper{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:2px solid var(--gold)}
+        .video-testimonial-container{position:relative;padding-bottom:56.25%;height:0;background:#000}
+        .video-testimonial-facade{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+        .video-testimonial-facade-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0a1628 0%,#1a2d4a 50%,#0a0e17 100%)}
+        .video-testimonial-facade-content{position:relative;z-index:1;text-align:center;padding:0 20px}
+        .video-testimonial-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.2);border:1px solid rgba(34,197,94,0.4);color:var(--green);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+        .video-testimonial-caption{text-align:center;padding:16px 20px;background:var(--bg);border-radius:0 0 20px 20px}
+        .video-testimonial-caption p{font-size:15px;color:var(--gray);margin:0}
+        .video-testimonial-caption strong{color:var(--gold)}
+        .video-testimonial-caption .green{color:var(--green);font-weight:600}
         
         /* FAQ */
         .faq-section{padding:64px 0;background:var(--bg)}
@@ -212,7 +221,6 @@
     </style>
 </head>
 <body>
-
     <!-- Hero -->
     <section class="hero">
         <div class="container">
@@ -221,20 +229,17 @@
             <p class="subheadline">No connections. No millions. After 2 years of rejection and failure, I found a method that worked. Now I'm showing you exactly how I did it.</p>
         </div>
     </section>
-
     <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="trust-item"><div class="trust-number">5</div><div class="trust-label">Years in Japan</div></div>
         <div class="trust-item"><div class="trust-number">400+</div><div class="trust-label">People Helped</div></div>
         <div class="trust-item"><div class="trust-number">100%</div><div class="trust-label">Documented</div></div>
     </div>
-
-    <!-- OPTIMIZATION 2: Video with Facade (loads Vimeo only on click) -->
+    <!-- Video with Facade -->
     <section class="video-section">
         <div class="container">
             <div class="video-wrapper">
                 <div class="video-container" id="videoContainer">
-                    <!-- Facade: shown first, lightweight -->
                     <div class="video-facade" id="videoFacade" onclick="loadVideo()">
                         <div class="video-facade-bg"></div>
                         <div class="video-facade-content">
@@ -244,17 +249,15 @@
                             <p class="facade-text"><strong>Watch this first</strong> — I explain everything in 7 minutes</p>
                         </div>
                     </div>
-                    <!-- Vimeo iframe NOT loaded until click -->
                 </div>
                 <div class="video-caption">👆 <strong>Watch this first</strong> — I explain everything in 7 minutes</div>
             </div>
         </div>
     </section>
-
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Japan Blueprint — 4,900 CFA</a>
+            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Japan Visa Guide — 4,900 CFA</a>
             <p class="cta-helper"><span>✓</span> Instant access after payment</p>
             <div class="payment-methods">
                 <div class="payment-badge"><span class="payment-badge-icon">📱</span> Orange Money</div>
@@ -263,7 +266,6 @@
             <p class="payment-secure"><span>🔒</span> Secure payment — you receive the guide instantly</p>
         </div>
     </section>
-
     <!-- Story -->
     <section class="story-section">
         <div class="container">
@@ -277,7 +279,6 @@
             <p class="story-text">This isn't motivation. This isn't theory. This is the <strong>exact documentation</strong> of what finally worked — every step, every document, every franc.</p>
         </div>
     </section>
-
     <!-- Problem -->
     <section class="problem-section">
         <div class="container">
@@ -291,7 +292,6 @@
             </div>
         </div>
     </section>
-
     <!-- Solution -->
     <section class="solution-section">
         <div class="container">
@@ -305,7 +305,6 @@
             </div>
         </div>
     </section>
-
     <!-- Cost -->
     <section class="cost-section">
         <div class="container">
@@ -327,12 +326,11 @@
             </div>
         </div>
     </section>
-
     <!-- Inside -->
     <section class="inside-section">
         <div class="container">
             <span class="section-label">What You Get</span>
-            <h2 class="section-title">Inside The Japan Blueprint</h2>
+            <h2 class="section-title">Inside The Japan Visa Guide</h2>
             <div class="inside-grid">
                 <div class="inside-card"><h4><span>🎯</span> The Hidden Visa Category</h4><p>The option that 90% of Africans don't know exists. Not tourist. Not the standard work visa.</p></div>
                 <div class="inside-card"><h4><span>📑</span> The 7 Essential Documents</h4><p>Not the 25 documents others ask for. Just the 7 that actually get you approved.</p></div>
@@ -343,8 +341,7 @@
             </div>
         </div>
     </section>
-
-    <!-- OPTIMIZATION 3: Proof images with lazy loading -->
+    <!-- Proof -->
     <section class="proof-section">
         <div class="container">
             <span class="section-label">The Proof</span>
@@ -377,18 +374,38 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonials -->
+    <!-- Testimonials — VIDEO TESTIMONIAL ADDED HERE -->
     <section class="testimonials-section">
         <div class="container">
             <span class="section-label">Results</span>
-            <h2 class="section-title">People Who Used The Blueprint</h2>
+            <h2 class="section-title">People Who Used The Guide</h2>
+
+            <!-- VIDEO TESTIMONIAL — loads only on click for fast page speed -->
+            <div class="video-testimonial">
+                <div class="video-testimonial-wrapper">
+                    <div class="video-testimonial-container" id="testimonialVideoContainer">
+                        <div class="video-testimonial-facade" id="testimonialFacade" onclick="loadTestimonialVideo()">
+                            <div class="video-testimonial-facade-bg"></div>
+                            <div class="video-testimonial-facade-content">
+                                <div class="video-testimonial-badge">✓ Real Buyer — Now in Tokyo</div>
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                                <p class="facade-text"><strong>A Visa Guide buyer. Now in Tokyo.</strong><br>Hear his story — filmed in Japan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-testimonial-caption">
+                        <p>🇳🇬 <strong>A buyer from Nigeria</strong> used the Visa Guide and relocated to Japan. <span class="green">No agent. No connections.</span></p>
+                    </div>
+                </div>
+            </div>
+
             <div class="testimonial-card"><p class="testimonial-text">"I bought the guide in March. Followed the steps exactly. By July, I was in Japan. This guide saved me a fortune and years of confusion."</p><div class="testimonial-author"><span class="testimonial-flag">🇨🇲</span><div class="testimonial-info"><h5>Emmanuel T.</h5><p>Douala, Cameroon</p></div></div></div>
             <div class="testimonial-card"><p class="testimonial-text">"Everyone told me it was impossible without millions. This blueprint showed me the exact path. Now I'm studying in Tokyo."</p><div class="testimonial-author"><span class="testimonial-flag">🇨🇲</span><div class="testimonial-info"><h5>Grace M.</h5><p>Bamenda, Cameroon</p></div></div></div>
             <div class="testimonial-card"><p class="testimonial-text">"The email templates alone were worth it. Got responses from 3 universities within 2 weeks. Now I have my visa."</p><div class="testimonial-author"><span class="testimonial-flag">🇳🇬</span><div class="testimonial-info"><h5>David O.</h5><p>Lagos, Nigeria</p></div></div></div>
         </div>
     </section>
-
     <!-- FAQ -->
     <section class="faq-section">
         <div class="container">
@@ -396,17 +413,16 @@
             <h2 class="section-title">Frequently Asked</h2>
             <div class="faq-item"><div class="faq-question">Is this method legal?</div><div class="faq-answer"><div class="faq-answer-inner">100% legal. Everything in this guide uses official Japanese immigration channels. No tricks. No fake documents. Just the right information applied correctly.</div></div></div>
             <div class="faq-item"><div class="faq-question">Do I need to speak Japanese?</div><div class="faq-answer"><div class="faq-answer-inner">Not to apply. The visa process is handled in English. I explain exactly what to write and how to communicate with institutions.</div></div></div>
-            <div class="faq-item"><div class="faq-question">What if I don't have 900K CFA right now?</div><div class="faq-answer"><div class="faq-answer-inner">The blueprint shows you exactly how to prepare over time. Many people save for 6-12 months while preparing their documents. The guide helps you start now, even if you're not financially ready today.</div></div></div>
-            <div class="faq-item"><div class="faq-question">What format is the blueprint?</div><div class="faq-answer"><div class="faq-answer-inner">Digital PDF + video training. You get instant access after payment. Works on phone, tablet, or computer. Keep it forever.</div></div></div>
+            <div class="faq-item"><div class="faq-question">What if I don't have 900K CFA right now?</div><div class="faq-answer"><div class="faq-answer-inner">The guide shows you exactly how to prepare over time. Many people save for 6-12 months while preparing their documents. The guide helps you start now, even if you're not financially ready today.</div></div></div>
+            <div class="faq-item"><div class="faq-question">What format is the guide?</div><div class="faq-answer"><div class="faq-answer-inner">Digital PDF + video training. You get instant access after payment. Works on phone, tablet, or computer. Keep it forever.</div></div></div>
         </div>
     </section>
-
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <h2 class="final-cta-title">Your Japan Story<br>Starts Today</h2>
             <p class="final-cta-subtitle">Get your passport ready. You're flying out soon. ✈️</p>
-            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Japan Blueprint — 4,900 CFA</a>
+            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Japan Visa Guide — 4,900 CFA</a>
             <div class="payment-methods">
                 <div class="payment-badge"><span class="payment-badge-icon">📱</span> Orange Money</div>
                 <div class="payment-badge"><span class="payment-badge-icon">📱</span> MTN MoMo</div>
@@ -415,61 +431,61 @@
             <div class="guarantee-box"><p><strong>✓ Instant Access</strong> — Download immediately after payment.<br><strong>✓ 400+ people</strong> have already used this method.</p></div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 The Japan Blueprint by Joel Academy. All rights reserved.</p>
+            <p>© 2026 The Japan Visa Guide by Joel Academy. All rights reserved.</p>
             <p style="margin-top:8px;">Digital product. Instant access after payment.</p>
         </div>
     </footer>
-
     <!-- Floating CTA -->
     <div class="floating-cta" id="floatingCta">
         <div class="container">
-            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Blueprint — 4,900 CFA</a>
+            <a href="https://whaqthkd.mychariow.shop/prd_7ozc5h/checkout" class="cta-button" onclick="fbq('track', 'InitiateCheckout');">Get The Visa Guide — 4,900 CFA</a>
             <p style="text-align:center;margin-top:8px;font-size:12px;color:var(--gray2);">📱 Pay with Orange Money or MTN MoMo — Instant access</p>
         </div>
     </div>
-
     <!-- Social Proof -->
     <div class="social-proof" id="socialProof">
         <div class="social-proof-icon">✓</div>
-        <div class="social-proof-text"><strong id="proofName"></strong>just downloaded the blueprint</div>
+        <div class="social-proof-text"><strong id="proofName"></strong>just downloaded the guide</div>
     </div>
-
     <script>
-        /* OPTIMIZATION 4: Load Vimeo ONLY when user clicks play */
+        /* Load main video only on click */
         function loadVideo(){
-            var container=document.getElementById('videoContainer');
-            var facade=document.getElementById('videoFacade');
-            var iframe=document.createElement('iframe');
-            iframe.src='https://player.vimeo.com/video/1160959098?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1';
-            iframe.allow='autoplay; fullscreen; picture-in-picture';
-            iframe.allowFullscreen=true;
-            iframe.title='The Japan Blueprint';
-            iframe.style.position='absolute';
-            iframe.style.top='0';
-            iframe.style.left='0';
-            iframe.style.width='100%';
-            iframe.style.height='100%';
-            iframe.style.border='none';
-            container.appendChild(iframe);
-            facade.style.display='none';
+            var c=document.getElementById('videoContainer');
+            var f=document.getElementById('videoFacade');
+            var i=document.createElement('iframe');
+            i.src='https://player.vimeo.com/video/1160959098?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1';
+            i.allow='autoplay; fullscreen; picture-in-picture';
+            i.allowFullscreen=true;
+            i.title='The Japan Visa Guide';
+            i.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none';
+            c.appendChild(i);
+            f.style.display='none';
         }
-
+        /* Load testimonial video only on click */
+        function loadTestimonialVideo(){
+            var c=document.getElementById('testimonialVideoContainer');
+            var f=document.getElementById('testimonialFacade');
+            var i=document.createElement('iframe');
+            i.src='https://player.vimeo.com/video/1178401255?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1';
+            i.allow='autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
+            i.allowFullscreen=true;
+            i.referrerPolicy='strict-origin-when-cross-origin';
+            i.title='A Visa Guide Buyer. Now in Tokyo.';
+            i.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none';
+            c.appendChild(i);
+            f.style.display='none';
+        }
         /* FAQ toggle */
         document.querySelectorAll('.faq-question').forEach(function(q){
-            q.addEventListener('click',function(){
-                q.parentElement.classList.toggle('active');
-            });
+            q.addEventListener('click',function(){q.parentElement.classList.toggle('active')});
         });
-
         /* Floating CTA */
         window.addEventListener('scroll',function(){
             document.getElementById('floatingCta').classList.toggle('visible',window.pageYOffset>800);
         });
-
         /* Social proof popup */
         var proofData=[{name:"🇨🇲 Emmanuel from Douala"},{name:"🇨🇲 Grace from Bamenda"},{name:"🇨🇲 Paul from Yaoundé"},{name:"🇳🇬 David from Lagos"},{name:"🇨🇲 Aline from Buea"},{name:"🇬🇭 Kwame from Accra"},{name:"🇨🇲 Jean from Limbe"},{name:"🇳🇬 Chidi from Abuja"}];
         var proofIndex=0;
@@ -482,6 +498,5 @@
         }
         setTimeout(function(){showSocialProof();setInterval(showSocialProof,35000)},20000);
     </script>
-
 </body>
 </html>
